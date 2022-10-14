@@ -1,0 +1,30 @@
+.home{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 15px;
+}
+.input{
+    padding-inline: 15px;
+    padding-block: 10px;
+    margin: 0;
+    border-bottom-left-radius: none;
+    box-shadow: 5px 5px 20px grey;
+    border: none;
+}
+.search-btn{
+    padding-inline: 15px;
+    padding-block: 10px;
+    background: rgb(3, 107, 121);
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    box-shadow: 5px 5px 20px grey;
+}
+.search-btn:hover{
+    background: rgb(2, 135, 158);
+}
+.expense{
+    padding: 10px;
+    box-shadow: 5px 5px 20px grey;
+}
