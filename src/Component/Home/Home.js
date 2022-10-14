@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Players from '../Players/Players';
 import './Home.css'
 
 const Home = () => {
+    const [players, setPlayers] = useState([]);
     const [search, setSearch] = useState("");
-    console.log(search);
+    useEffect(()=>{
+        fetch(`https://www.thesportsdb.com/api/v1/json/2/searchplayers.php?p=${search}`)
+        .then(res=>res.json())
+        .then(data=>setPlayers(data?.player))
+    },[search])
+    console.log(players);
     return (
         <div className='home'>
             <div className="player-section">
